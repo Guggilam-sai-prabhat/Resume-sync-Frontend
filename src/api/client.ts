@@ -8,7 +8,7 @@ baseURL: import.meta.env.VITE_BACKEND_URL,
 console.log("API client initialized with base URL:", client.defaults.baseURL);
 export const api = {
     async getResumes(): Promise<ResumesResponse> {
-        const { data } = await client.get<ResumesResponse>("/resumes");
+        const { data } = await client.get<ResumesResponse>("/resumes/");
         return data;
     },
 
